@@ -8,11 +8,10 @@ module Api
            
            def create
                 image = Image.new(image_params)
-
                 if image.save
                     render json: {status: 'SUCCESS', message:'Saved article', data:image},status: :ok
                 else
-                    render json: {status: 'ERROR', message:'Image not saved', data:image.erros},status: :unprocessable_entity
+                    render json: {status: 'ERROR', message:'Image not saved', data:image.errors},status: :unprocessable_entity
                 end
             end
             
