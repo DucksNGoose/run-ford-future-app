@@ -17,7 +17,7 @@ module Api
 
             def destroy
 				request = Request.find(params[:id])
-				reuqest.destroy
+				request.destroy
 				render json: {status: 'SUCCESS', message:'Deleted request', data:article},status: :ok
 			end
             
