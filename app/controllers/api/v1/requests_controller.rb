@@ -14,6 +14,12 @@ module Api
                     render json: {status: 'ERROR', message:'problem to request image, try again', data:request.errors},status: :unprocessable_entity
                 end
             end
+
+            def destroy
+				request = Request.find(params[:id])
+				reuqest.destroy
+				render json: {status: 'SUCCESS', message:'Deleted request', data:article},status: :ok
+			end
             
             def image_params
                 params.permit(:is_processed)
