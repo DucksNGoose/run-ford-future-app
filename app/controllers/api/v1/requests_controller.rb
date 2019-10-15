@@ -18,7 +18,7 @@ module Api
             def destroy
 				request = Request.find(params[:id])
 				request.destroy
-				render json: {status: 'SUCCESS', message:'Deleted request', data:article},status: :ok
+				render json: {status: 'SUCCESS', message:'Deleted request', data:request},status: :ok
 			end
             
             def image_params
