@@ -21,7 +21,7 @@ module Api
 				render json: {status: 'SUCCESS', message:'Deleted request', data:request},status: :ok
 			end
             
-            def image_params
+            def req_params
                 params.permit(:is_processed)
             end
         end
